@@ -1,0 +1,135 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    font-family: Quicksand, sans-serif;
+}
+
+body[data-bs-theme=dark] {
+    background: var(--bs-secondary-bg);
+}
+
+#app {
+    flex-shrink: 0;
+    padding-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.card-header,
+.accordion-button:not(.collapsed) {
+    color: var(--bs-primary-color-contrast);
+    background-color: var(--bs-primary)
+}
+
+.btn {
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary.btn-lg:hover {
+    transform: scale(1.15);
+}
+
+.main-navbar {
+    text-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+
+.main-navbar .nav-item {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.main-navbar .navbar-nav .nav-link {
+    color: #fff;
+    transition: .3s;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: .8rem 1rem;
+}
+
+.home-background {
+    position: relative;
+    box-shadow: inset 0 10px 15px rgba(0, 0, 0, .6);
+}
+
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.navbar-socials .list-inline-item {
+    background: rgba(37, 37, 37, 0.5);
+}
+
+.navbar-socials .list-inline-item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.navbar-socials a {
+    display: inline-block;
+    line-height: 1;
+    color: #fff;
+}
+
+.navbar-socials a:hover {
+    color: var(--bs-primary-bg-subtle);
+}
+
+.discord {
+    border: none;
+    width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-link {
+        position: relative;
+    }
+
+    .navbar .nav-link::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 3px;
+        transition: width .3s;
+        left: 0.7rem;
+        bottom: 0.5rem;
+        background: var(--bs-primary-border-subtle);
+    }
+
+    .navbar .nav-item:hover .nav-link::before,
+    .navbar .nav-link.active::before {
+        width: calc(100% - 1.4rem);
+    }
+}

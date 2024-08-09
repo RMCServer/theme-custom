@@ -1,0 +1,18 @@
+{
+    "color": "#179300",
+    "youtube_link": "cOeX-cyFUy0",
+    "discord_id": "713324199967457361",
+    "twitter": "https://twitter.com/Azuriom",
+    "footer_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt, justo sit amet sagittis fermentum, est purus vestibulum risus, vel lacinia libero ligula non erat. Aenean viverra nisi leo.",
+    "footer_article": "Vestibulum convallis, urna eget gravida malesuada, orci risus lobortis lectus, at lectus massa in diam.",
+    "footer_links": [
+        {
+            "name": "Lien 1",
+            "value": null
+        },
+        {
+            "name": "Boutique",
+            "value": null
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "id": "custom",
+    "name": "Custom",
+    "description": "Modern light theme with configurable color based on guide.",
+    "version": "1.0.0",
+    "url": "https://drupal.realitymc.eu/",
+    "authors": [
+        "Arthur"
+    ],
+    "azuriom_api": "1.0.0",
+    "apiId": 99
+}
