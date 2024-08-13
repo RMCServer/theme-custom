@@ -3,69 +3,23 @@
 @section('title', trans('messages.home'))
 
 @section('content')
+<div class="background-vors home"></div>
     <div class="container">
-        @if($message)
-            <div class="card mb-5">
-                <div class="card-body text-center">
-                    {{ $message }}
-                </div>
-            </div>
-        @endif
-
-        @if(theme_config('youtube_link'))
-            <div class="ratio ratio-16x9 mb-4">
-                <iframe src="https://www.youtube.com/embed/{{ theme_config('youtube_link') }}&autoplay=1"
-                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/{{ theme_config('youtube_link') }}?autoplay=1><img src=https://img.youtube.com/vi/{{ theme_config('youtube_link') }}/hqdefault.jpg><span>▶</span></a>"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                ></iframe>
-            </div>
-        @endif
-
-        @if(! $servers->isEmpty())
-            <h2 class="text-center">{{ trans('messages.servers') }}</h2>
-
-            <div class="row gy-3 justify-content-center mb-5">
-                @foreach($servers as $server)
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">
-                                    {{ $server->name }}
-                                </h3>
-
-                                @if($server->isOnline())
-                                    <div class="progress mb-1">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ $server->getPlayersPercents() }}%">
-                                        </div>
-                                    </div>
-
-                                    <p class="mb-1">
-                                        {{ trans_choice('messages.server.total', $server->getOnlinePlayers(), [
-                                            'max' => $server->getMaxPlayers(),
-                                        ]) }}
-                                    </p>
-                                @else
-                                    <p>
-                                    <span class="badge bg-danger text-white">
-                                        {{ trans('messages.server.offline') }}
-                                    </span>
-                                    </p>
-                                @endif
-
-                                @if($server->joinUrl())
-                                    <a href="{{ $server->joinUrl() }}" class="btn btn-primary">
-                                        {{ trans('messages.server.join') }}
-                                    </a>
-                                @else
-                                    <p class="card-text">{{ $server->fullAddress() }}</p>
-                                @endif
-                            </div>
-                        </div>
+        <div class="home-top">
+            @if($message)
+                <div class="card mb-5">
+                    <div class="card-body text-center">
+                        {{ $message }}
                     </div>
-                @endforeach
-            </div>
-        @endif
+                </div>
+            @endif
+
+            <div class="text-content"><div class="content"><div class="title-wrap"><h6 class="title-prefix">Onze services</h6><h1 class="title">Boteninkoop service in hartje amsterdam</h1></div><div class="separator"></div><p class="desc">orem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis odio et eros scelerisque, sit amet volutpat mauris aliquet. Morbi maximus, diam viverra tincidunt tristique, leo elit aliquet nunc, nec auctor elit dolor eget tellus. In velit tortor, imperdiet vel vulputate eget, congue at lectus. Praesent scelerisque, velit eget aliquet luctus, turpis leo finibus turpis, non malesuada erat.</p></div></div>
+            <a href="#" class="button">
+               <i class="bi bi-calendar2-check-fill mr-10"></i>
+               <span>Maak nu een afspraak</span>
+            </a>
+        </div>
 
         <div class="row gy-4">
             <div class="col-md-8">

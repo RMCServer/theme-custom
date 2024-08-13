@@ -1,4 +1,4 @@
-<footer class="text-bg-dark py-5" data-bs-theme="dark">
+<footer class="py-5 footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
